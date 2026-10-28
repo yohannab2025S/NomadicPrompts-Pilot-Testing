@@ -15,3 +15,14 @@ Calls are cached by (model, setting, prompt), so re-running never re-pays for fi
 
 Status: these scripts were written without access to ARC and have NOT been run against the live APIs; `extraction.py` and `analysis.py` were tested on
 synthetic data only. Check the first few raw responses and the OpenAI-compatible endpoint assumption in `arc_client.py` before launching full runs.
+
+
+## Current status
+
+The `word_sorting` pilot has completed Part A prompt scoring, prompt selection, and Part B evaluation through ARC using `gpt-oss-120b`, `deepseek-v4.1-flash`, and `glm-5.3`. Results are saved under `results/word_sorting/`.
+
+DeepSeek-V4.1-Flash was used to generate candidate prompts because Claude Sonnet 4.6 was unavailable. This substitution is recorded in the run cost report.
+
+Part B evaluation is complete; the statistical analysis step is still pending. DeepSeek achieved 100% baseline accuracy on the held-out items, leaving no room to measure improvement for that model on this task.
+
+ARC pricing remains unverified, so no dollar cost is reported. Raw API logs and local credentials are excluded from Git.
