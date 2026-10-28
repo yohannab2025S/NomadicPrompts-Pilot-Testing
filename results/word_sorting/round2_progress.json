@@ -1,0 +1,48 @@
+{
+  "completed": {
+    "0": [
+      "Sort the list in standard English dictionary order, comparing characters one at a time and, for words with a common prefix, using the first differing character to determine order. Output the sorted items on a single line separated by spaces.",
+      "Arrange the list alphabetically according to conventional English dictionary ordering: examine letters sequentially, and if entries share an initial prefix, let the next character that differs decide their order. Return the final sequence as one line with spaces between entries."
+    ],
+    "1": [
+      "Arrange the words in dictionary order: go through the list comparing first letters, and only move on to subsequent letters if necessary; then provide the sorted list as plain text.",
+      "Put the words into alphabetical order as a dictionary does by checking initial letters first and later letters only when required, then return the ordered list in plain text."
+    ],
+    "2": [
+      "Arrange the given words in alphabetical order from A to Z, leave every word in lowercase exactly as supplied, retain any duplicates if they occur, and output only the sorted list."
+    ],
+    "3": [
+      "Arrange the words below in ascending lexicographic order. Keep capitalization and spelling unchanged, do not add numbers to the items, and provide no explanation in the final answer.",
+      "Place the following words in dictionary order from smallest to largest. Preserve the original capitalization and spelling, leave the items unnumbered, and omit any explanatory text from the final response."
+    ],
+    "4": [
+      "Sort the provided words into ascending alphabetical order using standard dictionary rules; preserve each word exactly as given and return them on one line separated by single spaces.",
+      "Put the supplied words in alphabetical order according to standard dictionary ordering, without altering any word, and produce a single line with the words separated by one space."
+    ],
+    "5": [
+      "Sort the given words alphabetically and output only the same words in ascending order as a plain space-separated sequence, with no other content."
+    ],
+    "6": [
+      "After the colon is a list; arrange its items in alphabetical order and output them on a single line, without labels, numbers, punctuation, or commentary.",
+      "Take the entries listed after the colon, alphabetize them, and present the result as one line, adding no labels, numbering, punctuation, or explanatory text."
+    ],
+    "7": [
+      "Sort the list below in ascending lexicographic order, keep each word\u2019s original spelling, and place one space between each word in the final sorted result."
+    ],
+    "8": [
+      "Arrange the following list in ascending lexicographic order, and provide the result compactly on one line with words separated by spaces, without bullets, numbering, or any extra text."
+    ],
+    "9": [
+      "Arrange the provided words in alphabetical order. Keep every word exactly as given\u2014do not paraphrase, translate, or modify it\u2014and return only the sorted words on one line separated by spaces.",
+      "Sort the supplied words alphabetically without changing, translating, or rewording any word; output just the ordered words in a single line with spaces between them."
+    ],
+    "10": [
+      "Perform a straightforward alphabetical sort: arrange the list's words in alphabetical order from first to last, and output only those ordered words with spaces between them.",
+      "Sort the words in the list alphabetically in ascending order, then reply with just the sorted words separated by spaces."
+    ],
+    "11": [
+      "Arrange the words alphabetically. Do not include the list label or any surrounding instruction text; sort only the words after the colon. Return the sorted words separated by single spaces.",
+      "Sort only the words following the colon into alphabetical order, ignoring the list label and any other surrounding instruction text. Output the sorted words with one space between each."
+    ]
+  }
+}

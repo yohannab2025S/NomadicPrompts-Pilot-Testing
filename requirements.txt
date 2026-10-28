@@ -1,0 +1,7 @@
+openai
+anthropic
+datasets
+numpy
+pandas
+scipy
+tiktoken
