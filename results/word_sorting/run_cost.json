@@ -1,0 +1,34 @@
+{
+  "task": "word_sorting",
+  "evaluation_models": [
+    "gpt-oss-120b",
+    "deepseek-v4.1-flash",
+    "glm-5.3"
+  ],
+  "fixed_settings": {
+    "gpt-oss-120b": "thinking-low",
+    "deepseek-v4.1-flash": "thinking-low",
+    "glm-5.3": "thinking-high"
+  },
+  "required_writer": "claude-sonnet-4-6",
+  "substitute_writer_requested": "deepseek-v4.1-flash",
+  "substitute_writer_setting": "thinking-low",
+  "writer_deviation": "Claude Sonnet 4.6 unavailable; DeepSeek-V4.1-Flash used through ARC.",
+  "successful_api_calls": 13972,
+  "failed_api_calls": 0,
+  "prompt_tokens": 1722881,
+  "completion_tokens": 3508176,
+  "sum_call_seconds": 72558.53727960587,
+  "writer_generation_calls": 13,
+  "writer_returned_models": [
+    "DeepSeek-V4.1-Flash"
+  ],
+  "model_strings": [
+    "deepseek-v4.1-flash -> DeepSeek-V4.1-Flash",
+    "glm-5.3 -> GLM-5.3-0",
+    "gpt-oss-120b -> gpt-oss-120b"
+  ],
+  "estimated_usd": null,
+  "cost_note": "ARC pricing is unverified. Dollar cost is not estimated; zero-priced config placeholders must not be reported as actual costs.",
+  "wall_clock_note": "Sum of call durations is not wall-clock time because ARC calls can run concurrently."
+}
