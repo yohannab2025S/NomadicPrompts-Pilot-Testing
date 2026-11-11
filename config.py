@@ -7,6 +7,9 @@ FORMAT_LINES = {
     "formal_fallacies": 'End your reply with a final line of exactly "Answer: valid" or "Answer: invalid".',
     "logical_deduction": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
     "word_sorting": 'End your reply with a final line of exactly "Answer: " followed by the sorted words separated by single spaces.',
+    "causal_judgement": 'End your reply with a final line of exactly "Answer: Yes" or "Answer: No".',
+    "salient_translation_error_detection": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
+    "multistep_arithmetic_two": 'End your reply with a final line of exactly "Answer: " followed by the final integer.',
 }
 
 # TODO: set the final tasks after baselines.py. n_a = Part A (optimization) size, n_b = Part B (held-out) size.
@@ -16,6 +19,9 @@ TASKS = {
                                           "logical_deduction_seven_objects"], n_a=100, n_b=200),
     "formal_fallacies": dict(hf_configs=["formal_fallacies"], n_a=100, n_b=150),
     "word_sorting": dict(hf_configs=["word_sorting"], n_a=100, n_b=150),
+    "causal_judgement": dict(hf_configs=["causal_judgement"], n_a=100, n_b=87),
+    "salient_translation_error_detection": dict(hf_configs=["salient_translation_error_detection"], n_a=100, n_b=150),
+    "multistep_arithmetic_two": dict(hf_configs=["multistep_arithmetic_two"], n_a=100, n_b=150),
 }
 
 # TODO: fill model_id with the exact strings from the ARC model list / provider docs.

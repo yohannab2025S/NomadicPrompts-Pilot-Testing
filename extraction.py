@@ -21,6 +21,22 @@ def extract_answer(task, text):
     if task == "word_sorting":
         if not raw: return None
         return " ".join(raw.strip().strip(".").split()).lower()
+    if task == "causal_judgement":
+        src = raw if raw else text[-200:]
+        mm = re.findall(r"\b(yes|no)\b", src.lower())
+        return (mm[0] if raw else mm[-1]) if mm else None
+    if task == "salient_translation_error_detection":
+        if raw:
+            mm = re.search(r"\(?([A-F])\)?", raw.upper())
+            return mm.group(1) if mm else None
+        mm = re.findall(r"\(([A-F])\)", text.upper())
+        return mm[-1] if mm else None
+    if task == "multistep_arithmetic_two":
+        if not raw: return None
+        mm = re.search(r"-?\d+(?:\.\d+)?", raw.replace(",", ""))
+        if not mm: return None
+        x = float(mm.group(0))
+        return str(int(x)) if x == int(x) else str(x)
     raise ValueError(task)
 
 def normalize_target(task, target):
@@ -29,6 +45,10 @@ def normalize_target(task, target):
         return re.sub(r"[()]", "", t).upper()
     if task == "word_sorting":
         return " ".join(t.split()).lower()
+    if task == "salient_translation_error_detection":
+        return re.sub(r"[()]", "", t).upper()
+    if task == "multistep_arithmetic_two":
+        return str(int(float(t)))
     return t.lower()
 
 def is_correct(task, response, target):
