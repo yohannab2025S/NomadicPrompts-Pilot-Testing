@@ -34,9 +34,13 @@ MODELS = {
     "glm-5.3": dict(provider_group="Z.ai", size="unclassified", host="arc", base_url_env="ARC_BASE_URL", key_env="ARC_API_KEY",
                         variants={"default": "GLM-5.3", "thinking-high": "GLM-5.3-thinking-high"}),
     "qwen3.5-4b": dict(provider_group="Alibaba", size="small", host="arc-ondemand", base_url_env="QWEN4B_BASE_URL", key_env="QWEN4B_API_KEY",
-                        variants={"default": "/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf"}),
+                        variants={"default": "/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf",
+                                  "no-think": "/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf"},
+                        extra_body={"no-think": {"chat_template_kwargs": {"enable_thinking": False}}}),
     "qwen3.5-9b": dict(provider_group="Alibaba", size="small", host="arc-ondemand", base_url_env="QWEN9B_BASE_URL", key_env="QWEN9B_API_KEY",
-                        variants={"default": "/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf"}),
+                        variants={"default": "/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf",
+                                  "no-think": "/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf"},
+                        extra_body={"no-think": {"chat_template_kwargs": {"enable_thinking": False}}}),
 }
 # TODO after baselines: one fixed reasoning setting per model.
 FINAL_SETTING = {

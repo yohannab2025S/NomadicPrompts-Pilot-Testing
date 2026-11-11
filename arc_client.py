@@ -51,9 +51,12 @@ def call_model(model_name, setting, prompt, item_id="", experiment="", run=0):
     with _sem(c["host"]):
         for attempt in range(4):
             try:
+                extra = c.get("extra_body", {}).get(setting)
+                rec["extra_body"] = extra
                 r = _client(model_name).chat.completions.create(
                     model=model_id, messages=[{"role": "user", "content": prompt}],
-                    temperature=config.TEMPERATURE, max_tokens=config.MAX_TOKENS)
+                    temperature=config.TEMPERATURE, max_tokens=config.MAX_TOKENS,
+                    **({"extra_body": extra} if extra else {}))
                 ch = r.choices[0]
                 rec.update(response=ch.message.content or "", finish_reason=ch.finish_reason, returned_model=r.model,
                            prompt_tokens=r.usage.prompt_tokens, completion_tokens=r.usage.completion_tokens)

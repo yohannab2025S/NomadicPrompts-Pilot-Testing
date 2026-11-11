@@ -13,7 +13,7 @@ if len(part_a) < N:
 items = part_a[:N]
 c = config.MODELS[model_name]
 
-for setting in c["variants"]:
+for setting in ([sys.argv[3]] if len(sys.argv) > 3 else c["variants"]):
     recs, t0 = [], time.time()
     for i in range(0, len(items), CHUNK):
         chunk = items[i:i + CHUNK]

@@ -1,2 +1,5 @@
 task,model,setting,n,correct,accuracy,in_50_80,errors,truncated,returned_model,minutes,sec_per_question,completion_tokens
 word_sorting,qwen3.5-9b,default,100,97,0.97,False,0,1,/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf,30.8,18.5,254906
+word_sorting,qwen3.5-9b,no-think,100,88,0.88,False,0,1,/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf,9.0,5.4,51834
+logical_deduction,qwen3.5-9b,no-think,100,99,0.99,False,0,0,/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf,7.7,4.6,58772
+formal_fallacies,qwen3.5-9b,no-think,100,99,0.99,False,0,0,/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf,9.0,5.4,69646
