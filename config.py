@@ -10,6 +10,7 @@ FORMAT_LINES = {
     "causal_judgement": 'End your reply with a final line of exactly "Answer: Yes" or "Answer: No".',
     "salient_translation_error_detection": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
     "multistep_arithmetic_two": 'End your reply with a final line of exactly "Answer: " followed by the final integer.',
+    "tracking_shuffled_objects_seven_objects": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
 }
 
 # TODO: set the final tasks after baselines.py. n_a = Part A (optimization) size, n_b = Part B (held-out) size.
@@ -22,6 +23,7 @@ TASKS = {
     "causal_judgement": dict(hf_configs=["causal_judgement"], n_a=100, n_b=87),
     "salient_translation_error_detection": dict(hf_configs=["salient_translation_error_detection"], n_a=100, n_b=150),
     "multistep_arithmetic_two": dict(hf_configs=["multistep_arithmetic_two"], n_a=100, n_b=150),
+    "tracking_shuffled_objects_seven_objects": dict(hf_configs=["tracking_shuffled_objects_seven_objects"], n_a=100, n_b=150),
 }
 
 # TODO: fill model_id with the exact strings from the ARC model list / provider docs.
