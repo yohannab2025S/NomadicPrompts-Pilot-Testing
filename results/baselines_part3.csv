@@ -7,3 +7,7 @@ multistep_arithmetic_two,qwen3.5-9b,no-think,100,98,0.98,False,0,0,/common/data/
 tracking_shuffled_objects_seven_objects,qwen3.5-9b,no-think,100,100,1.0,False,0,0,/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf,7.0,4.2,51551
 causal_judgement,qwen3.5-9b,no-think,100,60,0.6,True,0,0,/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf,3.6,2.1,23990
 salient_translation_error_detection,qwen3.5-9b,no-think,100,68,0.68,True,0,1,/common/data/models/unsloth--Qwen3.5-9B-GGUF--BF16/Qwen3.5-9B-BF16.gguf,9.6,5.7,46026
+causal_judgement,gpt-oss-120b,thinking-low,100,68,0.68,True,0,0,gpt-oss-120b,0.8,0.5,10269
+causal_judgement,deepseek-v4.1-flash,thinking-low,100,73,0.73,True,0,0,DeepSeek-V4.1-Flash,9.9,6.0,61966
+salient_translation_error_detection,gpt-oss-120b,thinking-low,100,70,0.7,True,0,0,gpt-oss-120b,11.4,6.9,12533
+salient_translation_error_detection,deepseek-v4.1-flash,thinking-low,100,81,0.81,False,0,0,DeepSeek-V4.1-Flash,5.0,3.0,36577
