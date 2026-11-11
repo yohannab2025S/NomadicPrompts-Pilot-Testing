@@ -13,7 +13,7 @@ rows = []
 for setting in c["variants"]:
     jobs = [(it["id"], bbh_data.build_prompt(task, "", it)) for it in items]
     t0 = time.time()
-    recs = arc_client.run_batch(model_name, setting, jobs, experiment="smoke_test", workers=1)
+    recs = arc_client.run_batch(model_name, setting, jobs, experiment="smoke_test", workers=4)
     secs = time.time() - t0
     print("Record fields logged:", sorted(recs[0].keys()))
     for r, it in zip(recs, items):
