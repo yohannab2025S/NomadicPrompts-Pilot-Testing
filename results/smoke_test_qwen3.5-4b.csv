@@ -1,0 +1,6 @@
+task,model,setting,item_id,correct,error,returned_model,finish_reason,completion_tokens
+word_sorting,qwen3.5-4b,default,word_sorting_0044,True,,/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf,stop,4769
+word_sorting,qwen3.5-4b,default,word_sorting_0098,True,,/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf,stop,691
+word_sorting,qwen3.5-4b,default,word_sorting_0184,True,,/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf,stop,904
+word_sorting,qwen3.5-4b,default,word_sorting_0123,True,,/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf,stop,810
+word_sorting,qwen3.5-4b,default,word_sorting_0121,True,,/common/data/models/unsloth--Qwen3.5-4B-GGUF--BF16/Qwen3.5-4B-BF16.gguf,stop,3467
