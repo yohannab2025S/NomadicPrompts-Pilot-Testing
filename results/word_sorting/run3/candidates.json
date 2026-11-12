@@ -1,0 +1,25 @@
+{
+  "round1": [
+    "Please look at the provided list of words and rearrange them so that they appear in standard alphabetical order, from A to Z. Present only the sorted sequence as your response.",
+    "Your job is to take the collection of terms given after the colon and order them alphabetically. Make sure to process every word correctly from the first letter to the last.",
+    "Examine the words supplied in the prompt and sort them lexicographically. The resulting output should list the words sequentially from a to z without any extra text or formatting.",
+    "Arrange the sequence of words provided in the input into alphabetical order. Compare the letters of each word from left to right to determine their exact relative positions.",
+    "Perform an alphabetical sort on the given string of words. Order the items starting with 'a' and ending with 'z', ensuring proper handling of any words that share initial letters.",
+    "Read the provided words carefully and organize them from lowest to highest based on standard dictionary sorting rules. Output the final ordered list clearly.",
+    "Take the input list of words and sequence them in ascending alphabetical order. Every word must be included in the final sorted output.",
+    "Sort the words presented in the prompt alphabetically. Evaluate the character values from the beginning of each word to ensure precise sequencing.",
+    "Your task is to reorder the input words alphabetically. Sort them from A through Z using standard lexicographical comparison for all characters.",
+    "Process the words given in the prompt by arranging them into alphabetical sequence. Check the spelling and initial letters to guarantee correct placement.",
+    "Rearrange the terms in the provided list into alphabetical order. Compare the words character by character from the start to determine the correct sequence.",
+    "Sort the given words from A to Z. Analyze the letters of each word sequentially to place them in the correct alphabetical position.",
+    "Organize the words in the input string into a standard alphabetical list. Ensure that every single word from the original text is accounted for in the final output.",
+    "Apply an alphabetical sorting algorithm to the words provided in the prompt. List the sorted items sequentially from the beginning of the alphabet to the end.",
+    "Review the supplied list of words and sort them lexicographically from a to z. Maintain the exact spelling of each word in the final sequence.",
+    "Put the provided words in alphabetical order. Compare the starting letters first, moving to subsequent letters as needed to establish the correct sequence.",
+    "Sequence the given collection of words in alphabetical order. Evaluate each word meticulously to ensure it occupies the proper slot from A to Z.",
+    "Reorder the words in the input text alphabetically. Check the alphabetical index of each word's letters to form a properly sorted output list.",
+    "Transform the given word list into an alphabetically sorted sequence. Ensure all words are arranged from A to Z based on standard dictionary ordering.",
+    "Sort the words included in the input string into alphabetical order. Evaluate the character sequence of each word to produce a correctly ordered output."
+  ],
+  "round2": []
+}

@@ -1,0 +1,25 @@
+{
+  "round1": [
+    "Review the source sentence in German and its English translation. Determine which type of translation error listed in the prompt occurs in the target text and select the corresponding option letter.",
+    "Compare the provided German source against the English translation. Identify the specific discrepancy type among the choices provided (such as dropped content, numerical changes, etc.) and output the matching letter.",
+    "Analyze the following German-to-English translation pair to detect any anomalies. Match the discrepancy to one of the predefined error categories and output your choice as a single option letter.",
+    "Examine the source text and translation for errors. Look for alterations in named entities, numbers, modifiers, antonyms, facts, or missing clauses, and choose the correct error class option.",
+    "Read the source sentence and its translated version carefully. Spot the translation flaw, categorize it into one of the designated categories, and provide the correct option letter.",
+    "Identify which category of error is present in the translated text relative to the German source, choosing from the given options ranging from modifiers to dropped content.",
+    "Perform an error analysis on the given German and English sentence pair. Pick the classification that best describes the deviation present in the translation.",
+    "Check the translation for faithfulness to the original German source. Determine the error type based on the definitions provided and specify the correct option.",
+    "Look for translation mistakes in the provided example by evaluating differences in meaning, entities, numbers, or omitted parts, and state the corresponding option code.",
+    "Spot the specific error type committed in the translation process from German to English by mapping the fault to the appropriate category listed in the prompt instructions.",
+    "Evaluate the semantic and factual correspondence between the German source and the English translation. Identify the category of the mistake made and output the matching letter.",
+    "Scan the provided translation for inconsistencies against the source text. Choose the correct error type from the options based on the nature of the mismatch.",
+    "Determine how the English translation fails to accurately reflect the German source text by classifying the error into one of the specified categories and selecting the right option.",
+    "Carefully read the source and target strings. Pinpoint the exact nature of the translation error according to the definitions provided and return the corresponding letter.",
+    "Assess the English translation against the original German sentence to uncover any factual, numerical, lexical, or structural discrepancies. Select the matching option.",
+    "Isolate the mistake in the provided translation relative to the German source. Match the mistake to the definitions for named entities, values, modifiers, antonyms, facts, or dropped content.",
+    "Examine the given translation pair for errors. Categorize the mistake according to the predefined taxonomy and provide the corresponding option letter.",
+    "Detect the translation error in the target sentence by comparing it with the source text. Choose the appropriate option label from the given categories.",
+    "Review the source text and its translated counterpart. Classify the translation error into one of the standard error types defined in the instructions and output the choice.",
+    "Identify the specific type of translation error present in the English text by checking for alterations in details, omissions, or factual changes relative to the German original."
+  ],
+  "round2": []
+}

@@ -1,0 +1,25 @@
+{
+  "round1": [
+    "Analyze the provided scenario involving events and outcomes to determine causal attribution. Consider how an average individual would evaluate responsibility or blame based on norms, expectations, and rules. Output your final judgment as either Yes or No.",
+    "Read the story carefully and decide whether the specified factor is commonly viewed as a cause of the outcome. Take into account normative defaults and unexpected deviations when forming your judgment. Provide your conclusion as Yes or No.",
+    "Evaluate the causal relationship described in the text through the lens of common-sense psychology and social norms. Determine if the highlighted element truly brought about the result in the eyes of a typical observer, replying with Yes or No.",
+    "Examine the given text about actions, events, and a final consequence. Assess whether the agent or factor in question is considered the primary cause, keeping in mind standard expectations and violations thereof. Answer with Yes or No.",
+    "Consider the narrative presented and decide how a layperson would attribute causation in this context. Weigh the normal course of events against any anomalous factors, then output your decision as Yes or No.",
+    "Assess the situation outlined in the prompt to ascertain whether a causal link exists according to typical human intuition. Factor in background rules and unexpected occurrences, and state your answer as Yes or No.",
+    "Review the short scenario detailing an event and its precursors. Using everyday causal reasoning\u2014which often factors in blame, rules, and counterfactuals\u2014decide if the mentioned entity caused the result. Respond with Yes or No.",
+    "Analyze how a typical human observer would judge the cause of the described outcome. Pay attention to which actions aligned with rules versus which violated them, and conclude with Yes or No.",
+    "Determine whether the highlighted element is viewed by ordinary people as a cause of the final event in the story. Account for standard behaviors and surprising twists, and output your answer as Yes or No.",
+    "Read through the causal scenario and evaluate the role of the specified element using common-sense intuitions about responsibility and causation. Provide your determination as Yes or No.",
+    "Judge whether the target factor caused the outcome in the provided narrative, adopting the perspective of a typical person influenced by norms and expectations. Reply with Yes or No.",
+    "Carefully read the vignette and decide if the action or object in question caused the resulting state of affairs, relying on intuitive causal concepts. Give your final choice as Yes or No.",
+    "Analyze the mechanics and human elements of the story to judge whether a typical person would attribute the final outcome to the specified factor. State your conclusion using Yes or No.",
+    "Consider the sequence of events and the underlying norms in the given scenario to evaluate causation from a common-sense viewpoint. Output your answer as Yes or No.",
+    "Examine the narrative to determine if the designated element is perceived as a true cause of the final event, factoring in baseline expectations and departures from them. Reply with Yes or No.",
+    "Evaluate the interaction of events described in the text and decide if a typical observer would say the target caused the outcome. Provide a simple Yes or No response.",
+    "Assess the causal status of the element mentioned in the prompt, taking into account ordinary human reasoning patterns regarding blame, rules, and necessity. Answer with Yes or No.",
+    "Read the provided scenario and determine whether standard causal attribution would point to the specified factor as the cause of the outcome. Output Yes or No.",
+    "Analyze the story using everyday intuitions about cause and effect, keeping in mind how rules and unexpected deviations shape our causal judgments. State your decision as Yes or No.",
+    "Decide whether a typical person would view the target element as causing the outcome in the described situation, factoring in standard expectations and norms. Reply with Yes or No."
+  ],
+  "round2": []
+}

@@ -1,0 +1,25 @@
+{
+  "round1": [
+    "Review the source sentence in German and compare it against the English translation to locate any discrepancies. Determine which of the provided error categories best describes the discrepancy and output the corresponding option letter.",
+    "Your job is to analyze a German source and its flawed English translation. Identify the type of mistake made from the given definitions\u2014such as altered entities, changed numbers, modified adjectives, antonym/negation swaps, dropped info, or factual errors\u2014and return the matching choice.",
+    "Carefully read the German text and the provided English translation. Look for the specific deviation present in the translation, map it to one of the listed error classes, and output the correct choice label.",
+    "Determine the exact nature of the translation error by contrasting the source sentence with the translated sentence. Choose the corresponding category from the list of options (A through F).",
+    "Inspect the translation provided for the given German source. One specific error category applies to the mistake in the text. Select the correct letter corresponding to that category.",
+    "Examine the source sentence alongside the translation. Pinpoint the exact semantic or factual divergence, match it to the allowed error types, and supply the corresponding option.",
+    "By comparing the German source to the English target, identify the discrepancy type among the choices provided: Named Entities, Numerical Values, Modifiers or Adjectives, Negation or Antonyms, Facts, or Dropped Content. Output the letter for the correct option.",
+    "Analyze the difference between the source text and the flawed translation. Based on the predefined error categories, select the letter that corresponds to the mistake.",
+    "Read the source sentence and translation pair, find the error in the translation, classify it according to the definitions of Named Entities, Numerical Values, Modifiers or Adjectives, Negation or Antonyms, Facts, or Dropped Content, and output the right choice.",
+    "Compare the original German sentence with the translated English version. Identify which error type is present and provide the correct option letter.",
+    "Perform a comparative analysis of the source and translation. Determine which type of linguistic or factual error has been introduced into the translation and output the matching option.",
+    "Look closely at the English translation to find where it deviates from the German source. Match this deviation to one of the six error categories and return the corresponding letter.",
+    "Evaluate the translation against the source sentence. Identify the precise category of error present in the translation from the given choices and return the corresponding option.",
+    "Check the given translation for errors against the source. Choose the option (A-F) that accurately categorizes the type of mistake made in the text.",
+    "Identify the single error category that describes how the English translation deviates from the German source sentence, using the provided definitions, and output the corresponding choice.",
+    "Read both the German input and the English translation. Determine which of the error classes defines the mismatch between them and output the appropriate option label.",
+    "Assess the quality of the translation by comparing it to the source text. Find the specific error present and map it to the correct category among the choices.",
+    "Study the translation in relation to the source sentence. Detect the error category\u2014ranging from changed entities to dropped content\u2014and output the matching option letter.",
+    "Examine the provided German-to-English translation pair. Spot the error, categorize it using the guidelines, and provide the letter corresponding to the correct category.",
+    "Cross-reference the German source with the English translation to identify any translational inaccuracies. Categorize the mistake using the provided list and output the corresponding choice."
+  ],
+  "round2": []
+}

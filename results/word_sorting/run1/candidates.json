@@ -1,0 +1,25 @@
+{
+  "round1": [
+    "Please alphabetize the collection of words provided in the list following your prompt and present them in a single line separated by spaces.",
+    "Your job is to take the given space-separated string of words, arrange them in standard alphabetical order from A to Z, and output the sorted sequence.",
+    "Examine the words given in the input sequence, sort them lexicographically, and write out the resulting ordered list of words.",
+    "Rearrange the terms provided in the input string so that they appear in alphabetical sequence, keeping all original words intact.",
+    "Perform an alphabetical sort on the collection of words supplied after the list label, outputting the clean, space-separated result.",
+    "Take the unsorted words presented in the prompt and order them alphabetically from the first letter to the last.",
+    "Process the incoming sequence of words by sorting them in ascending alphabetical order, then display the rearranged words.",
+    "Sort every word in the provided list alphabetically, ensuring they are ordered correctly based on standard dictionary rules.",
+    "Arrange the sequence of words found in the input data into alphabetical order, maintaining single-space separation between them.",
+    "Review the provided words, determine their alphabetical sorting sequence, and output them properly ordered.",
+    "Your task is to organize the inputted list of words alphabetically, placing them in the correct sequence from start to finish.",
+    "Put the given collection of words into alphabetical order and output the resulting sorted sequence without any extra text.",
+    "Lexicographically sort the words that are provided in the input line, presenting the final sorted items clearly.",
+    "Order the words from the input list in standard alphabetical sequence, ensuring every term is accounted for.",
+    "Analyze the sequence of words attached to the prompt, sort them alphabetically, and print the resulting ordered list.",
+    "Rearrange the given terms into alphabetical order according to standard English dictionary sorting principles.",
+    "Sort the words contained within the input string into alphabetical order, making sure they are sequenced correctly from A to Z.",
+    "Take the input list of words and sort them alphabetically from beginning to end, returning just the ordered terms.",
+    "Execute an alphabetical sort on the provided words, arranging them logically from first to last.",
+    "Organize the words given in the input text into a properly sorted alphabetical sequence."
+  ],
+  "round2": []
+}
