@@ -3,19 +3,26 @@ Any change after the plan is submitted must be recorded in deviations_log.md."""
 import os
 
 SEED = 42
+
+
 FORMAT_LINES = {
-    "formal_fallacies": 'End your reply with a final line of exactly "Answer: valid" or "Answer: invalid".',
-    "logical_deduction": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
     "word_sorting": 'End your reply with a final line of exactly "Answer: " followed by the sorted words separated by single spaces.',
+<<<<<<< Updated upstream
     "causal_judgement": 'End your reply with a final line of exactly "Answer: Yes" or "Answer: No".',
     "salient_translation_error_detection": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
     "multistep_arithmetic_two": 'End your reply with a final line of exactly "Answer: " followed by the final integer.',
     "tracking_shuffled_objects_seven_objects": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
+=======
+
+    "salient_translation_error_detection": 'End your reply with a final line of exactly "Answer: (X)" where X is the correct option letter from A to F.',
+
+    "causal_judgement": 'End your reply with a final line of exactly "Answer: " followed by either Yes or No.',
+>>>>>>> Stashed changes
 }
 
-# TODO: set the final tasks after baselines.py. n_a = Part A (optimization) size, n_b = Part B (held-out) size.
-# logical_deduction pools the 3-, 5- and 7-object BBH variants (750 items).
+# n_a = Part A (optimization); n_b = Part B (held-out evaluation).
 TASKS = {
+<<<<<<< Updated upstream
     "logical_deduction": dict(hf_configs=["logical_deduction_three_objects", "logical_deduction_five_objects",
                                           "logical_deduction_seven_objects"], n_a=100, n_b=200),
     "formal_fallacies": dict(hf_configs=["formal_fallacies"], n_a=100, n_b=150),
@@ -24,6 +31,25 @@ TASKS = {
     "salient_translation_error_detection": dict(hf_configs=["salient_translation_error_detection"], n_a=100, n_b=150),
     "multistep_arithmetic_two": dict(hf_configs=["multistep_arithmetic_two"], n_a=100, n_b=150),
     "tracking_shuffled_objects_seven_objects": dict(hf_configs=["tracking_shuffled_objects_seven_objects"], n_a=100, n_b=150),
+=======
+    "word_sorting": dict(
+        hf_configs=["word_sorting"],
+        n_a=100,
+        n_b=150
+    ),
+
+    "salient_translation_error_detection": dict(
+        hf_configs=["salient_translation_error_detection"],
+        n_a=100,
+        n_b=150
+    ),
+
+    "causal_judgement": dict(
+        hf_configs=["causal_judgement"],
+        n_a=87,
+        n_b=100
+    ),
+>>>>>>> Stashed changes
 }
 
 # TODO: fill model_id with the exact strings from the ARC model list / provider docs.
@@ -61,7 +87,7 @@ TEMPERATURE = 0
 MAX_TOKENS = 8000          # high enough that reasoning models are not truncated; log finish_reason
 MAX_CONCURRENT_ARC = 10    # ARC limit
 MAX_CONCURRENT_OTHER = 10
-WRITER_MODEL = "claude-sonnet-4-6"
+WRITER_MODEL = "gemini-3.5-flash-lite"
 WRITER_TEMPERATURE = 1.0
 
 # TODO: USD per 1M tokens (prompt, completion). Use 0 for free ARC. Cost is computed from COMPLETION tokens.

@@ -1,0 +1,25 @@
+{
+  "round1": [
+    "Simulate the series of swaps step-by-step to track the final item held by the target person, and choose the correct option letter corresponding to that item.",
+    "Carefully follow each exchange sequence from beginning to end, mapping out the state changes for every participant, and identify the final item associated with the requested person.",
+    "Track the movement of each entity through all the listed pairwise swaps in chronological order. Determine what the final subject holds and output the matching option letter.",
+    "Execute the sequence of trade operations meticulously. Keep a running tally of who possesses what, and select the multiple-choice option that represents the final state for the queried individual.",
+    "By tracing every single trade step by step from the initial assignments, determine the ultimate position, object, or partner of the designated person at the conclusion, then output the corresponding option letter.",
+    "Reconstruct the history of swaps in order. Update the inventory/assignment of the participants after each swap and report the option letter that corresponds to the final status of the specified person.",
+    "Perform a mental simulation of the stated exchanges. Follow the specified individual through all swaps to see where they end up, and output the letter of the correct option.",
+    "Track the exchanges chronologically. At the end of the narrative, identify the exact item or association belonging to the named person and choose the corresponding multiple-choice letter.",
+    "Read through the initial setup and update the assignments sequentially as each swap occurs. Conclude by finding the final status of the requested participant and match it to the given options.",
+    "Keep a strict ledger of all trades described in the prompt. Follow the object or partner transformations step by step and output the letter matching the final condition of the target individual.",
+    "Execute a sequential trace of the swaps. Update the holders of each item/position after every single action, and select the option letter corresponding to the final item held by the target character.",
+    "Step through the transactions one by one, updating the status of the individuals involved. Determine the final attribute of the requested entity and provide the corresponding option choice.",
+    "Simulate the chain of swaps accurately. Track the requested individual through every single transaction to find their final state, and select the matching option letter.",
+    "Process the swaps in the exact order they happen. Note the transfer of items or roles at each step, and output the correct option letter representing the final state of the specified person.",
+    "Maintain a mental map of the current assignments for all participants. Apply each swap sequentially, identify the final condition of the queried person, and output the corresponding option letter.",
+    "Evaluate the sequence of events from start to finish. Update the pairings or holdings after each swap statement, and choose the option letter that correctly identifies the final outcome for the named subject.",
+    "Trace the specified character's possessions or partners through the entire sequence of trades. Determine the final outcome and select the appropriate option letter.",
+    "Follow the step-by-step swaps carefully, ensuring no trade is missed. Conclude by identifying the final match for the requested person and outputting the corresponding option letter.",
+    "Execute a mental simulation of the item/partner trading process. Track the state of the queried participant through every swap and select the correct option letter.",
+    "Analyze the initial distribution and sequentially apply every trade mentioned in the text. Find the final item or partner of the specified individual and choose the matching option letter."
+  ],
+  "round2": []
+}

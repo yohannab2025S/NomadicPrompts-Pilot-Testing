@@ -1,0 +1,22 @@
+cand_idx,round,instruction,gpt-oss-120b,deepseek-v4.1-flash,glm-5.3
+0,0,,0.7100,1.0000,0.9300
+1,1,Please alphabetize the collection of words provided in the list following your prompt and present them in a single line separated by spaces.,0.7700,1.0000,0.9200
+2,1,"Your job is to take the given space-separated string of words, arrange them in standard alphabetical order from A to Z, and output the sorted sequence.",0.7700,0.9900,
+3,1,"Examine the words given in the input sequence, sort them lexicographically, and write out the resulting ordered list of words.",,,
+4,1,"Rearrange the terms provided in the input string so that they appear in alphabetical sequence, keeping all original words intact.",,,
+5,1,"Perform an alphabetical sort on the collection of words supplied after the list label, outputting the clean, space-separated result.",,,
+6,1,Take the unsorted words presented in the prompt and order them alphabetically from the first letter to the last.,,,
+7,1,"Process the incoming sequence of words by sorting them in ascending alphabetical order, then display the rearranged words.",,,
+8,1,"Sort every word in the provided list alphabetically, ensuring they are ordered correctly based on standard dictionary rules.",,,
+9,1,"Arrange the sequence of words found in the input data into alphabetical order, maintaining single-space separation between them.",,,
+10,1,"Review the provided words, determine their alphabetical sorting sequence, and output them properly ordered.",,,
+11,1,"Your task is to organize the inputted list of words alphabetically, placing them in the correct sequence from start to finish.",,,
+12,1,Put the given collection of words into alphabetical order and output the resulting sorted sequence without any extra text.,,,
+13,1,"Lexicographically sort the words that are provided in the input line, presenting the final sorted items clearly.",,,
+14,1,"Order the words from the input list in standard alphabetical sequence, ensuring every term is accounted for.",,,
+15,1,"Analyze the sequence of words attached to the prompt, sort them alphabetically, and print the resulting ordered list.",,,
+16,1,Rearrange the given terms into alphabetical order according to standard English dictionary sorting principles.,,,
+17,1,"Sort the words contained within the input string into alphabetical order, making sure they are sequenced correctly from A to Z.",,,
+18,1,"Take the input list of words and sort them alphabetically from beginning to end, returning just the ordered terms.",,,
+19,1,"Execute an alphabetical sort on the provided words, arranging them logically from first to last.",,,
+20,1,Organize the words given in the input text into a properly sorted alphabetical sequence.,,,

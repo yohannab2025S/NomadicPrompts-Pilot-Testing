@@ -15,10 +15,10 @@ Or run all steps:
 
 IMPORTANT DEVIATION:
 The required Claude Sonnet 4.6 writer was unavailable.
-This pilot uses DeepSeek-V4.1-Flash through VT ARC instead.
-The actual returned model name is recorded in writer_calls.jsonl.
-
-Only models in config.FINAL_SETTING are evaluated.
+Gemini 3.5 Flash Lite is used as the independent writer
+for the full data collection.
+Writer model, token usage, and generation time are logged
+in writer_calls.jsonl.
 """
 
 import csv
@@ -28,6 +28,8 @@ import random
 import re
 import sys
 import time
+from google import genai
+from google.genai import types
 from pathlib import Path
 
 import config
@@ -37,17 +39,21 @@ from extraction import is_correct
 
 
 MODELS = list(config.FINAL_SETTING)
-WRITER_MODEL = "deepseek-v4.1-flash"
-WRITER_SETTING = "thinking-low"
-WRITER_TEMPERATURE = 0
+
 
 RESULTS = Path("results")
 LOGS = Path("logs")
 LOGS.mkdir(parents=True, exist_ok=True)
 
+RUN_ID = None
+RUN_SEED = config.SEED
+
 
 def out(task, name):
-    folder = RESULTS / task
+    if RUN_ID is None:
+        raise RuntimeError("Run ID has not been set.")
+
+    folder = RESULTS / task / RUN_ID
     folder.mkdir(parents=True, exist_ok=True)
     return folder / name
 
@@ -97,46 +103,42 @@ def parse_list(txt, expected=None):
 
 
 def writer_call(prompt, tag):
-    """Generate instructions using ARC, recording the actual model used.
+    """Generate candidate prompts using independent Gemini writer."""
 
-    This is a documented substitution for the required Claude writer.
-    """
     start = time.time()
 
-    jobs = [(tag, prompt)]
-    records = arc_client.run_batch(
-        WRITER_MODEL,
-        WRITER_SETTING,
-        jobs,
-        experiment=f"ape-writer-{tag}",
+    client = genai.Client(
+        api_key=os.environ["GEMINI_API_KEY"]
     )
 
-    if len(records) != 1:
-        raise RuntimeError(
-            f"Writer returned {len(records)} records instead of one."
+    response = client.models.generate_content(
+        model=config.WRITER_MODEL,
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            max_output_tokens=config.MAX_TOKENS,
+            temperature=config.WRITER_TEMPERATURE
         )
+    )
 
-    record = records[0]
+    txt = response.text or ""
 
-    if record.get("error"):
-        raise RuntimeError(f"Writer API error: {record['error']}")
+    if not txt.strip():
+        raise RuntimeError("Gemini returned an empty response.")
 
-    txt = record.get("response")
-    if not txt or not isinstance(txt, str):
-        raise RuntimeError(f"Writer returned no usable text: {record}")
+    usage = response.usage_metadata
 
     entry = {
         "tag": tag,
-        "requested_model": WRITER_MODEL,
-        "requested_setting": WRITER_SETTING,
-        "returned_model": record.get("returned_model"),
-        "required_writer": "claude-sonnet-4-6",
-        "writer_deviation": "Claude unavailable; ARC DeepSeek substituted",
+        "requested_model": config.WRITER_MODEL,
+        "returned_model": getattr(
+            response, "model_version", config.WRITER_MODEL
+        ),
+        "temperature": config.WRITER_TEMPERATURE,
+        "input_tokens": getattr(usage, "prompt_token_count", None),
+        "output_tokens": getattr(usage, "candidates_token_count", None),
+        "seconds": time.time() - start,
         "prompt": prompt,
         "response": txt,
-        "input_tokens": record.get("prompt_tokens"),
-        "output_tokens": record.get("completion_tokens"),
-        "seconds": time.time() - start,
     }
 
     with open(LOGS / "writer_calls.jsonl", "a", encoding="utf-8") as f:
@@ -147,6 +149,7 @@ def writer_call(prompt, tag):
 
 def gen1(task, k=5):
     """Generate 20 initial candidate instructions."""
+
     path = out(task, "candidates.json")
 
     if path.exists():
@@ -156,7 +159,7 @@ def gen1(task, k=5):
             return
 
     split = bbh_data.get_split(task)
-    rng = random.Random(config.SEED)
+    rng = random.Random(RUN_SEED)
     examples = rng.sample(split["part_a"], k)
 
     shots = "\n\n".join(
@@ -169,20 +172,24 @@ def gen1(task, k=5):
         "Write 20 DIFFERENT instructions, each a short paragraph, "
         "that could be given to a language model before an input "
         "like these so that it produces the correct output. "
-        "Vary the approach: clarify the task, reasoning steps, "
-        "constraints, and formatting. "
+        "Vary the wording, reasoning guidance, and formatting, "
+        "but preserve the exact task and objective shown by the examples. "
+        "Do not change the operation, sorting criteria, answer, "
+        "or expected output. Do not introduce a different task. "
         "Do not include the answer-format line; it is added separately. "
         "Reply with ONLY a valid JSON array of exactly 20 strings."
     )
 
     print("Generating 20 initial instructions...", flush=True)
+
     candidates = parse_list(
-        writer_call(prompt, f"{task}-gen1"),
+        writer_call(prompt, f"{RUN_ID}-{task}-gen1"),
         expected=20,
     )
 
     save_json(path, {"round1": candidates, "round2": []})
     print(f"Saved {len(candidates)} candidates to {path}", flush=True)
+
 
 
 def candidate_rows(task):
@@ -313,7 +320,7 @@ def score(task):
                 config.FINAL_SETTING[model],
                 items,
                 row["instruction"],
-                experiment=f"ape-{task}-A",
+                experiment=f"ape-{task}-{RUN_ID}-A",
             )
 
             accuracy = sum(correctness) / len(correctness)
@@ -351,17 +358,18 @@ def load_scores(task, require_complete=True):
 
 
 def best_for(rows, model):
-    """Highest accuracy, then shortest instruction, then lowest index."""
+    """Choose the best generated instruction, excluding baseline."""
+    generated = [row for row in rows if row["round"] != "0"]
+
     return max(
-        rows,
+        generated,
         key=lambda row: (
             float(row[model]),
             -len(row["instruction"]),
             -int(row["cand_idx"]),
         ),
     )
-
-
+    
 def gen2(task):
     """Generate 20 paraphrases of top Round 1 instructions."""
     path = out(task, "candidates.json")
@@ -395,7 +403,7 @@ def gen2(task):
     if not pool:
         raise RuntimeError("No Round 1 instructions available.")
 
-    rng = random.Random(config.SEED)
+    rng = random.Random(RUN_SEED)
     allocations = [20 // len(pool)] * len(pool)
 
     for i in rng.sample(
@@ -435,7 +443,7 @@ def gen2(task):
         )
 
         generated = parse_list(
-            writer_call(prompt, f"{task}-gen2-{index}"),
+            writer_call(prompt, f"{RUN_ID}-{task}-gen2-{index}"),
             expected=count,
         )
 
@@ -472,7 +480,7 @@ def select(task):
         for model in MODELS
     }
 
-    rng = random.Random(config.SEED)
+    rng = random.Random(RUN_SEED)
     selections["_random"] = rng.choice(generated)["cand_idx"]
 
     one_size = max(
@@ -574,7 +582,7 @@ def evalB(task):
                 config.FINAL_SETTING[model],
                 items,
                 instruction,
-                experiment=f"ape-{task}-B",
+                experiment=f"ape-{task}-{RUN_ID}-B",
             )
 
             with open(path, "a", newline="", encoding="utf-8") as f:
@@ -622,10 +630,9 @@ def cost_report(task):
                 experiment = record.get("experiment", "")
 
                 if (
-                    experiment.startswith(f"ape-{task}-A")
-                    or experiment.startswith(f"ape-{task}-B")
-                    or experiment.startswith(f"ape-writer-{task}-")
-                ):
+                    experiment.startswith(f"ape-{task}-{RUN_ID}-A")
+                    or experiment.startswith(f"ape-{task}-{RUN_ID}-B")
+                    ):
                     calls.append(record)
 
     seen = set()
@@ -654,7 +661,7 @@ def cost_report(task):
             for line in f:
                 if line.strip():
                     entry = json.loads(line)
-                    if entry.get("tag", "").startswith(f"{task}-"):
+                    if entry.get("tag", "").startswith(f"{RUN_ID}-{task}-"):
                         writer_entries.append(entry)
 
     model_strings = sorted({
@@ -666,13 +673,13 @@ def cost_report(task):
         "task": task,
         "evaluation_models": MODELS,
         "fixed_settings": dict(config.FINAL_SETTING),
-        "required_writer": "claude-sonnet-4-6",
-        "substitute_writer_requested": WRITER_MODEL,
-        "substitute_writer_setting": WRITER_SETTING,
+        "required_writer": "gemini",
+        "substitute_writer_requested": config.WRITER_MODEL,
+        "substitute_writer_setting": config.WRITER_TEMPERATURE,
         "writer_deviation": (
-            "Claude Sonnet 4.6 unavailable; "
-            "DeepSeek-V4.1-Flash used through ARC."
-        ),
+    "Claude Sonnet 4.6 was unavailable. "
+    "Gemini was used as the independent writer."
+),  
         "successful_api_calls": len(successful),
         "failed_api_calls": sum(
             bool(r.get("error")) for r in unique
@@ -713,15 +720,31 @@ def cost_report(task):
     return report
 
 
+
 def main():
-    if len(sys.argv) != 3:
+    global RUN_ID, RUN_SEED
+
+    if len(sys.argv) != 4:
         print(
-            "Usage: python ape_pipeline.py TASK "
+            "Usage: python ape_pipeline.py TASK RUN "
             "{gen1|score|gen2|select|evalB|cost|all}"
         )
         sys.exit(1)
 
-    task, step = sys.argv[1], sys.argv[2]
+    task, run_id, step = sys.argv[1], sys.argv[2], sys.argv[3]
+
+    if task not in config.TASKS:
+        raise ValueError(f"Unknown task: {task}")
+
+    if run_id not in ("run1", "run2", "run3"):
+        raise ValueError("Run must be run1, run2, or run3.")
+
+    RUN_ID = run_id
+    RUN_SEED = config.SEED + int(run_id[-1]) - 1
+
+    print(f"Task: {task}", flush=True)
+    print(f"Run: {RUN_ID}", flush=True)
+    print(f"Random seed: {RUN_SEED}", flush=True)
 
     steps = {
         "gen1": gen1,

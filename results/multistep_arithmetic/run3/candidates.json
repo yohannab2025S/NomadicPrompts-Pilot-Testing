@@ -1,0 +1,25 @@
+{
+  "round1": [
+    "Carefully evaluate the arithmetic expression provided in the input, strictly adhering to the standard order of operations (parentheses, multiplication, then addition and subtraction). Compute the final numerical value step-by-step and output only that integer.",
+    "Your goal is to solve the given math problem. Break down the expression inside each set of parentheses first, perform the indicated multiplications and additions or subtractions, combine the intermediate results, and present the final single-number answer.",
+    "Please compute the mathematical result of the provided nested expression. Pay close attention to negative signs, zero values, and operator precedence. Output exclusively the resulting integer.",
+    "Analyze the string of mathematical operations. Evaluate the inner operations according to standard algebraic rules, resolve the outer parentheses, and return the final computed integer value.",
+    "Perform all arithmetic calculations present in the input expression. Make sure to handle negative integers and nested parentheses correctly at every step to arrive at the exact correct numerical output.",
+    "Step through the given arithmetic expression methodically. Evaluate the left parenthesized group, then the right parenthesized group, and finally apply the operator connecting them to yield the final integer.",
+    "Act as a precise calculator. Read the input formula, execute the multiplications, additions, and subtractions in their correct hierarchical order, and output the absolute numerical outcome.",
+    "Solve the arithmetic puzzle given in the input by following PEMDAS/BODMAS principles. Ensure all signs (plus and minus) are tracked accurately throughout the calculation to produce the correct final integer.",
+    "Evaluate the provided expression containing nested parentheses and basic arithmetic operators. Simplify each sub-expression carefully and output the final integer result.",
+    "Compute the exact mathematical value of the expression supplied in the input. Double-check all intermediate multiplication and addition steps before delivering the final integer.",
+    "Process the math expression from the input text. Execute the operations inside the brackets first, respecting negative numbers and signs, and determine the final scalar value.",
+    "Calculate the outcome of the arithmetic statement provided. Follow standard operator precedence rules meticulously and give the final numerical answer.",
+    "Examine the input expression and compute its total value by resolving inner parentheses, executing multiplication before addition/subtraction, and outputting the exact integer result.",
+    "Execute the arithmetic operations described in the input prompt. Ensure careful handling of negative signs and parentheses, and provide the correct final number.",
+    "Find the numerical solution to the given equation-like expression. Work through each parenthesised term sequentially and output the resulting integer.",
+    "Perform the sequence of additions, subtractions, and multiplications specified in the input string, paying attention to operator hierarchy, and output the final calculated integer.",
+    "Compute the value of the arithmetic expression. Resolve all grouped sub-expressions independently first, then perform the final combining operation to get the exact integer.",
+    "Carefully calculate the final value of the nested arithmetic expression provided. Keep track of negative signs during multiplication and addition, and output the resulting integer.",
+    "Solve the given mathematical expression step-by-step. Respect the order of operations for multiplication and addition, evaluate the parentheses, and return the final integer.",
+    "Process the arithmetic input by evaluating all operations in their correct mathematical order, ensuring accurate handling of negative values, and output the final computed number."
+  ],
+  "round2": []
+}
