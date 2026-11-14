@@ -7,22 +7,14 @@ SEED = 42
 
 FORMAT_LINES = {
     "word_sorting": 'End your reply with a final line of exactly "Answer: " followed by the sorted words separated by single spaces.',
-<<<<<<< Updated upstream
     "causal_judgement": 'End your reply with a final line of exactly "Answer: Yes" or "Answer: No".',
     "salient_translation_error_detection": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
     "multistep_arithmetic_two": 'End your reply with a final line of exactly "Answer: " followed by the final integer.',
     "tracking_shuffled_objects_seven_objects": 'End your reply with a final line of exactly "Answer: (X)" where X is the option letter.',
-=======
-
-    "salient_translation_error_detection": 'End your reply with a final line of exactly "Answer: (X)" where X is the correct option letter from A to F.',
-
-    "causal_judgement": 'End your reply with a final line of exactly "Answer: " followed by either Yes or No.',
->>>>>>> Stashed changes
 }
 
 # n_a = Part A (optimization); n_b = Part B (held-out evaluation).
 TASKS = {
-<<<<<<< Updated upstream
     "logical_deduction": dict(hf_configs=["logical_deduction_three_objects", "logical_deduction_five_objects",
                                           "logical_deduction_seven_objects"], n_a=100, n_b=200),
     "formal_fallacies": dict(hf_configs=["formal_fallacies"], n_a=100, n_b=150),
@@ -31,25 +23,6 @@ TASKS = {
     "salient_translation_error_detection": dict(hf_configs=["salient_translation_error_detection"], n_a=100, n_b=150),
     "multistep_arithmetic_two": dict(hf_configs=["multistep_arithmetic_two"], n_a=100, n_b=150),
     "tracking_shuffled_objects_seven_objects": dict(hf_configs=["tracking_shuffled_objects_seven_objects"], n_a=100, n_b=150),
-=======
-    "word_sorting": dict(
-        hf_configs=["word_sorting"],
-        n_a=100,
-        n_b=150
-    ),
-
-    "salient_translation_error_detection": dict(
-        hf_configs=["salient_translation_error_detection"],
-        n_a=100,
-        n_b=150
-    ),
-
-    "causal_judgement": dict(
-        hf_configs=["causal_judgement"],
-        n_a=87,
-        n_b=100
-    ),
->>>>>>> Stashed changes
 }
 
 # TODO: fill model_id with the exact strings from the ARC model list / provider docs.
@@ -59,8 +32,8 @@ TASKS = {
 MODELS = {
     "gpt-oss-120b": dict(provider_group="OpenAI", size="large", host="arc", base_url_env="ARC_BASE_URL", key_env="ARC_API_KEY",
                          variants={"thinking-low": "gpt-oss-120b-thinking-low", "thinking-high": "gpt-oss-120b-thinking-high"}),
-    "gpt-oss-20b": dict(provider_group="OpenAI", size="small", host="TODO (ARC GPU or paid host)", base_url_env="OSS20_BASE_URL", key_env="OSS20_API_KEY",
-                        variants={"default": "TODO-gpt-oss-20b"}),
+    "gpt-oss-20b": dict(provider_group="OpenAI", size="small", host="arc-llamacpp", base_url_env="OSS20_BASE_URL", key_env="OSS20_API_KEY",
+                        variants={"default": "/common/data/models/unsloth--gpt-oss-20b-GGUF--F16/gpt-oss-20b-F16.gguf"}),
     "deepseek-large": dict(provider_group="DeepSeek", size="large", host="DeepSeek API", base_url_env="DEEPSEEK_BASE_URL", key_env="DEEPSEEK_API_KEY",
                            variants={"default": "TODO-deepseek-v4-pro"}),
     "deepseek-v4.1-flash": dict(provider_group="DeepSeek", size="small", host="arc", base_url_env="ARC_BASE_URL", key_env="ARC_API_KEY",
@@ -78,6 +51,7 @@ MODELS = {
 }
 # TODO after baselines: one fixed reasoning setting per model.
 FINAL_SETTING = {
+    "gpt-oss-20b": "default",
     "gpt-oss-120b": "thinking-low",
     "deepseek-v4.1-flash": "thinking-low",
     "glm-5.3": "thinking-high",
