@@ -1,0 +1,7 @@
+task,model,setting,n,correct,accuracy,in_50_80,errors,returned_model,minutes,completion_tokens
+word_sorting,gpt-oss-120b,thinking-low,2,1,0.5,True,0,gpt-oss-120b,0.4,782
+word_sorting,gpt-oss-120b,thinking-high,2,2,1.0,False,0,gpt-oss-120b,1.1,3318
+word_sorting,deepseek-v4.1-flash,thinking-low,2,2,1.0,False,0,DeepSeek-V4.1-Flash,0.2,487
+word_sorting,deepseek-v4.1-flash,thinking-high,2,2,1.0,False,0,DeepSeek-V4.1-Flash,0.2,545
+word_sorting,glm-5.3,default,2,2,1.0,False,0,GLM-5.3-0,0.5,912
+word_sorting,glm-5.3,thinking-high,2,1,0.5,True,0,GLM-5.3-0,0.1,193
