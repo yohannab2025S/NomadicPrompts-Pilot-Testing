@@ -55,6 +55,9 @@ FINAL_SETTING = {
     "gpt-oss-120b": "thinking-low",
     "deepseek-v4.1-flash": "thinking-low",
     "glm-5.3": "thinking-high",
+    "qwen3.5-9b": "no-think",
+    "qwen3.5-4b": "no-think"
+
 }
 
 TEMPERATURE = 0
