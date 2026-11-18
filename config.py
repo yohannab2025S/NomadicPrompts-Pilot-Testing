@@ -55,11 +55,11 @@ FINAL_SETTING = {
     "gpt-oss-120b": "thinking-low",
     "deepseek-v4.1-flash": "thinking-low",
     "glm-5.3": "thinking-high",
-    "qwen3.5-9b": "no-think",
-    "qwen3.5-4b": "no-think"
-
+    # "qwen3.5-9b": "no-think",   # Nick runs these on his computer
+    # "qwen3.5-4b": "no-think",
 }
 
+ACTIVE_MODELS = ["gpt-oss-120b", "gpt-oss-20b", "deepseek-v4.1-flash", "glm-5.3", "qwen3.5-9b", "qwen3.5-4b"]
 TEMPERATURE = 0
 MAX_TOKENS = 8000          # high enough that reasoning models are not truncated; log finish_reason
 MAX_CONCURRENT_ARC = 10    # ARC limit
