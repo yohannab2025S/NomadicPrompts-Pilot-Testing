@@ -2,9 +2,8 @@
   "gpt-oss-20b": "15",
   "gpt-oss-120b": "10",
   "deepseek-v4.1-flash": "18",
-  "glm-5.3": "18",
   "qwen3.5-9b": "3",
   "qwen3.5-4b": "15",
   "_random": "4",
-  "_one_size": "18"
+  "_one_size": "15"
 }
