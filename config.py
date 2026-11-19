@@ -54,8 +54,8 @@ FINAL_SETTING = {
     "gpt-oss-20b": "default",
     "gpt-oss-120b": "thinking-low",
     "deepseek-v4.1-flash": "thinking-low",
-    # "qwen3.5-9b": "no-think",   # Nick runs these on his computer
-    # "qwen3.5-4b": "no-think",
+    "qwen3.5-9b": "no-think",
+    "qwen3.5-4b": "no-think",
 }
 
 ACTIVE_MODELS = ["gpt-oss-120b", "gpt-oss-20b", "deepseek-v4.1-flash", "qwen3.5-9b", "qwen3.5-4b"]
