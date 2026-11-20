@@ -1,0 +1,156 @@
+model,task,item_id,experiment,category,finish_reason,completion_tokens,auto_extracted,target,auto_correct,response_tail,human_label_correct,extraction_error_Y_N,notes
+gpt-oss-20b,word_sorting,word_sorting_0028,ape-word_sorting-run1-B,truncated,length,8000,,abo armful bonaventure cremate dictatorial embryology frond gasify guiana herman indistinguishable oscillatory pancreatic passenger referential stockholder through tip,FALSE,,FALSE,N,"Empty response: all 8,000 tokens went to hidden reasoning"
+qwen3.5-9b,word_sorting,word_sorting_0186,ape-word_sorting-run1-B,truncated,length,8000,,affable almost antic apache astute dandelion deadlock delphic execution fortunate horntail leverage levitate libertarian sanction scathe semitic storehouse sweeney unbeknownst,FALSE,"ady handled above)
+602. **u**: (Already handled above)
+603. **f**: (Already handled above)
+604. **s**: (Already handled above)
+605. **d**: (Already handled above)
+606. **a**: (Already handled above)
+607. **l**: (Already handled above)
+608. **s**: (Already handled above)
+609. **u**: (Already handled above)
+610. **f**: (Already handled above)
+611. **s**: (Already handled above)
+612. **d**: (Already handled above)
+613. **a**: (Already handled above)
+614. **l**: (Already handled above)
+615. **s**: (",FALSE,N,"Loops on 'Already handled above', cut off, no final answer"
+qwen3.5-4b,salient_translation_error_detection,salient_translation_error_detection_0113,ape-salient_translation_error_detection-run1-A,truncated,length,8000,E,(E),TRUE,"ut (E).
+
+Answer: (E)
+
+Wait, I'll check if the answer is (F).
+No.
+
+Answer: (E)
+
+Answer: (E)
+
+Wait, I'll output (E).
+
+Answer: (E)
+
+Wait, I'll check if the answer is (F).
+No.
+
+Answer: (E)
+
+Answer: (E)
+
+Wait, I'll output (E).
+
+Answer: (E)
+
+Wait, I'll check if the answer is (F).
+No.
+
+Answer: (E)
+
+Answer: (E)
+
+Wait, I'll output (E).
+
+Answer: (E)
+
+Wait, I'll check if the answer is (F).
+No.
+
+Answer: (E)
+
+Answer: (E)
+
+Wait, I'll output (E).
+
+Answer: (E)
+
+Wait, I'll check if the answer is (F).
+No.
+
+Answer",TRUE,N,Repeats 'Answer: (E)' until cut off; (E) is correct
+gpt-oss-20b,word_sorting,word_sorting_0229,ape-word_sorting-run1-B,truncated,length,8000,,afternoon complementary dixie hesitate horsepower immaculate kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,FALSE,,FALSE,N,"Empty response: all 8,000 tokens went to hidden reasoning"
+qwen3.5-9b,salient_translation_error_detection,salient_translation_error_detection_0124,ape-salient_translation_error_detection-run1-A,truncated,length,8000,B,(E),FALSE,".
+
+Answer: (B)
+
+Wait, I'll stop.
+
+Answer: (B)
+
+Wait, I'll output the final answer.
+
+Answer: (B)
+
+Wait, I'll stop.
+
+Answer: (B)
+
+Wait, I'll output the final answer.
+
+Answer: (B)
+
+Wait, I'll stop.
+
+Answer: (B)
+
+Wait, I'll output the final answer.
+
+Answer: (B)
+
+Wait, I'll stop.
+
+Answer: (B)
+
+Wait, I'll output the final answer.
+
+Answer: (B)
+
+Wait, I'll stop.
+
+Answer: (B)
+
+Wait, I'll output the final answer.
+
+Answer: (B)
+
+Wait, I'll stop.
+
+Answer: (B)
+
+Wait, I'll output the final answer.
+
+Answer: (B)",FALSE,N,Repeats 'Answer: (B)' until cut off; target is (E)
+qwen3.5-4b,word_sorting,word_sorting_0182,ape-word_sorting-run1-A,no answer extracted,stop,39,,caliber capricious eft faulkner fragile gastrointestinal headboard irishman kingsley lobby nary ouzo peaceable phillip phylum residue stamp sulfanilamide upholster,FALSE,caliber capricious eft faulkner fragile gastrointestinal headboard irishman kingsley lobby nary ouzo peaceable phillip phylum residue stamp sulfanilamide upholster,TRUE,Y,"List matches the target exactly but has no 'Answer:' line, so it was scored wrong"
+qwen3.5-4b,word_sorting,word_sorting_0033,ape-word_sorting-run1-A,no answer extracted,stop,33,,adonis birdseed citizen contaminant convair extensive fateful frighten judaica scrubby soothe southeastern stormy suppose trillion trundle,FALSE,adonis birdseed contaminant citizen convair citizen scrubby extensive frighten fateful judaica list southeastern soothe stormy suppose scrubby trundle trillion,FALSE,Y,"No 'Answer:' line; list wrong anyway (citizen and scrubby repeated, stray 'list')"
+qwen3.5-4b,word_sorting,word_sorting_0137,ape-word_sorting-run1-B,no answer extracted,stop,33,,affirmative airframe arcing ballroom bassoon benefit buggy coupon decide dodge hypothermia intrepid junior ladle nineveh prorogue schmitt shagging sparse ulcerate,FALSE,affirmative airframe arcing ballroom bassoon buggy coupon decide dodge intrepid junior ladle nineveh prorogue schmitt shagging sparse ulcerate,FALSE,Y,No 'Answer:' line; list wrong anyway (benefit and hypothermia missing)
+gpt-oss-120b,word_sorting,word_sorting_0197,ape-word_sorting-A,wrong answer,stop,334,bate callous climb cortez dnieper dogging giantess garrison mast moran muddy prank reverie satisfy staunch,bate callous climb cortez dnieper dogging garrison giantess mast moran muddy prank reverie satisfy staunch,FALSE,Answer: bate callous climb cortez dnieper dogging giantess garrison mast moran muddy prank reverie satisfy staunch,TRUE,N,giantess and garrison swapped (pilot log)
+gpt-oss-20b,salient_translation_error_detection,salient_translation_error_detection_0090,ape-salient_translation_error_detection-run1-B,wrong answer,stop,126,D,(A),FALSE,"The translation incorrectly changes the nationality from Austrian to Australian, which is a change of a named entity.
+
+Answer: (D)",FALSE,N,Answered (D) Named Entities for Austrian _ Australian; label is (A) Modifiers
+deepseek-v4.1-flash,word_sorting,word_sorting_0105,ape-word_sorting-A,wrong answer,stop,438,baccarat blare bowman earl gloss granola hollandaise inauspicious mackenzie metaphoric pedro penis psyche quarantine roadster supranational,arenaceous baccarat blare bowman earl gloss granola hollandaise inauspicious mackenzie metaphoric pedro penis psyche quarantine roadster supranational,FALSE,Answer: baccarat blare bowman earl gloss granola hollandaise inauspicious mackenzie metaphoric pedro penis psyche quarantine roadster supranational,FALSE,N,'arenaceous' missing (pilot log)
+qwen3.5-9b,word_sorting,word_sorting_0184,ape-word_sorting-run1-A,wrong answer,stop,38,appoint biharmonic baneberry dyne moustache pirate windowsill wiry,appoint baneberry biharmonic dyne moustache pirate windowsill wiry,FALSE,"appoint biharmonic baneberry dyne moustache pirate windowsill wiry
+Answer: appoint biharmonic baneberry dyne moustache pirate windowsill wiry",FALSE,N,biharmonic and baneberry swapped
+qwen3.5-4b,salient_translation_error_detection,salient_translation_error_detection_0190,ape-salient_translation_error_detection-run1-B,wrong answer,stop,1168,A,(C),FALSE,"un"" if that were an option. Since ""Noun"" isn't an option, and ""Modifiers"" covers attributes like gender, (A) is the strongest candidate.
+
+Let's try to find if this is a known example. This looks like an example from the **XLSum** or **WMT** error analysis datasets. In those contexts, ""son"" -> ""daughter"" is often labeled as a **Modifier** error because it changes the gender attribute of the noun.
+
+Therefore, the error is changing the gender modifier of the noun ""person"".
+
+Answer: (A)
+
+Answer: (A)",FALSE,N,Answered (A); target ©
+gpt-oss-120b,word_sorting,word_sorting_0037,ape-word_sorting-A,wrong answer,stop,593,accomplice az circumcircle clatter crepe doff emission fairfax incantation labour lorry pleura prig ride tea upon viaduct wheelbase whim,accomplice az choral circumcircle clatter crepe doff emission fairfax incantation labour lorry pleura prig ride tea upon viaduct wheelbase whim,FALSE,Answer: accomplice az circumcircle clatter crepe doff emission fairfax incantation labour lorry pleura prig ride tea upon viaduct wheelbase whim,FALSE,N,'choral' missing (pilot log)
+gpt-oss-20b,word_sorting,word_sorting_0229,ape-word_sorting-run1-B,wrong answer,stop,1759,afternoon complementary dixie hesitate horsepower kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,afternoon complementary dixie hesitate horsepower immaculate kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,FALSE,Answer: afternoon complementary dixie hesitate horsepower kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,FALSE,N,'immaculate' missing
+deepseek-v4.1-flash,word_sorting,word_sorting_0099,ape-word_sorting-A,wrong answer,stop,121,miaow lise snipe,lise miaow snipe,FALSE,Answer: miaow lise snipe,FALSE,N,miaow and lise swapped (pilot log)
+gpt-oss-120b,word_sorting,word_sorting_0047,ape-word_sorting-A,correct (control),stop,176,amperage crimea farther insolent ping protocol raillery stephen tech,amperage crimea farther insolent ping protocol raillery stephen tech,TRUE,Answer: amperage crimea farther insolent ping protocol raillery stephen tech,TRUE,N,Correct (pilot log)
+gpt-oss-20b,word_sorting,word_sorting_0107,ape-word_sorting-run1-B,correct (control),stop,1101,bivalve mainstream malformed mortify o'connell paunchy sleuth twelvefold umbilical vinegar,bivalve mainstream malformed mortify o'connell paunchy sleuth twelvefold umbilical vinegar,TRUE,Answer: bivalve mainstream malformed mortify o'connell paunchy sleuth twelvefold umbilical vinegar,TRUE,N,Correct
+deepseek-v4.1-flash,word_sorting,word_sorting_0000,ape-word_sorting-A,correct (control),stop,86,syndrome therefrom,syndrome therefrom,TRUE,Answer: syndrome therefrom,TRUE,N,Correct (pilot log)
+qwen3.5-9b,word_sorting,word_sorting_0119,ape-word_sorting-run1-B,correct (control),stop,308,allegoric collate euphony gloriana loge lollipop mast milord prolix rendezvous salle schnabel,allegoric collate euphony gloriana loge lollipop mast milord prolix rendezvous salle schnabel,TRUE,"g' comes before 'l', so loge comes first)
+6.  **m**: mast, milord (Compare ""ast"" vs ""il"": 'a' comes before 'i', so mast comes first)
+7.  **p**: prolix
+8.  **r**: rendezvous
+9.  **s**: salle, schnabel (Compare ""alle"" vs ""chn"": 'a' comes before 'c', so salle comes first)
+
+**Sorted Sequence:**
+allegoric, collate, euphony, gloriana, loge, lollipop, mast, milord, prolix, rendezvous, salle, schnabel
+
+Answer: allegoric collate euphony gloriana loge lollipop mast milord prolix rendezvous salle schnabel",TRUE,N,Correct
