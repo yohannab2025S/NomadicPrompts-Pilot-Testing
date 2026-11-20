@@ -5,11 +5,11 @@ gpt-oss-120b,causal_judgement,A,True,2134
 gpt-oss-120b,causal_judgement,B,True,522
 gpt-oss-120b,salient_translation_error_detection,A,True,2191
 gpt-oss-120b,salient_translation_error_detection,B,True,900
-gpt-oss-20b,word_sorting,A,True,0
+gpt-oss-20b,word_sorting,A,True,2000
 gpt-oss-20b,word_sorting,B,True,1050
-gpt-oss-20b,causal_judgement,A,True,0
+gpt-oss-20b,causal_judgement,A,True,1960
 gpt-oss-20b,causal_judgement,B,True,522
-gpt-oss-20b,salient_translation_error_detection,A,True,0
+gpt-oss-20b,salient_translation_error_detection,A,True,2000
 gpt-oss-20b,salient_translation_error_detection,B,True,900
 deepseek-v4.1-flash,word_sorting,A,True,2100
 deepseek-v4.1-flash,word_sorting,B,True,1050
