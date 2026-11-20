@@ -1,0 +1,13 @@
+category,group,n_transfers,share_kept_most
+semantic_clarification,has change,36,0.528
+semantic_clarification,does not,0,
+structural_change,has change,0,
+structural_change,does not,36,0.528
+formatting,has change,0,
+formatting,does not,36,0.528
+reasoning_instruction,has change,4,0.5
+reasoning_instruction,does not,32,0.531
+examples,has change,0,
+examples,does not,36,0.528
+output_constraint,has change,2,0.5
+output_constraint,does not,34,0.529

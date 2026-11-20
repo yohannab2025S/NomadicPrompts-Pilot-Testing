@@ -1,5 +1,7 @@
 model,task,item_id,experiment,category,finish_reason,completion_tokens,auto_extracted,target,auto_correct,response_tail,human_label_correct,extraction_error_Y_N,notes
+gpt-oss-120b,word_sorting,word_sorting_0086,ape-word_sorting-run1-B,truncated,length,8000.0,,betony boar bootleg bronzy centaur charge clemens collet contemporaneous contravariant cordial dorado handicraft macmahon mesh monterey possession regina underclassman,False,,,,
 gpt-oss-20b,word_sorting,word_sorting_0028,ape-word_sorting-run1-B,truncated,length,8000.0,,abo armful bonaventure cremate dictatorial embryology frond gasify guiana herman indistinguishable oscillatory pancreatic passenger referential stockholder through tip,False,,,,
+deepseek-v4.1-flash,salient_translation_error_detection,salient_translation_error_detection_0027,ape-salient_translation_error_detection-run1-A,truncated,length,8000.0,,(F),False,,,,
 qwen3.5-9b,word_sorting,word_sorting_0186,ape-word_sorting-run1-B,truncated,length,8000.0,,affable almost antic apache astute dandelion deadlock delphic execution fortunate horntail leverage levitate libertarian sanction scathe semitic storehouse sweeney unbeknownst,False,"ady handled above)
 602. **u**: (Already handled above)
 603. **f**: (Already handled above)
@@ -67,66 +69,18 @@ Wait, I'll check if the answer is (F).
 No.
 
 Answer",,,
-gpt-oss-20b,word_sorting,word_sorting_0229,ape-word_sorting-run1-B,truncated,length,8000.0,,afternoon complementary dixie hesitate horsepower immaculate kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,False,,,,
-qwen3.5-9b,salient_translation_error_detection,salient_translation_error_detection_0124,ape-salient_translation_error_detection-run1-A,truncated,length,8000.0,B,(E),False,".
-
-Answer: (B)
-
-Wait, I'll stop.
-
-Answer: (B)
-
-Wait, I'll output the final answer.
-
-Answer: (B)
-
-Wait, I'll stop.
-
-Answer: (B)
-
-Wait, I'll output the final answer.
-
-Answer: (B)
-
-Wait, I'll stop.
-
-Answer: (B)
-
-Wait, I'll output the final answer.
-
-Answer: (B)
-
-Wait, I'll stop.
-
-Answer: (B)
-
-Wait, I'll output the final answer.
-
-Answer: (B)
-
-Wait, I'll stop.
-
-Answer: (B)
-
-Wait, I'll output the final answer.
-
-Answer: (B)
-
-Wait, I'll stop.
-
-Answer: (B)
-
-Wait, I'll output the final answer.
-
-Answer: (B)",,,
 qwen3.5-4b,word_sorting,word_sorting_0182,ape-word_sorting-run1-A,no answer extracted,stop,39.0,,caliber capricious eft faulkner fragile gastrointestinal headboard irishman kingsley lobby nary ouzo peaceable phillip phylum residue stamp sulfanilamide upholster,False,caliber capricious eft faulkner fragile gastrointestinal headboard irishman kingsley lobby nary ouzo peaceable phillip phylum residue stamp sulfanilamide upholster,,,
 qwen3.5-4b,word_sorting,word_sorting_0033,ape-word_sorting-run1-A,no answer extracted,stop,33.0,,adonis birdseed citizen contaminant convair extensive fateful frighten judaica scrubby soothe southeastern stormy suppose trillion trundle,False,adonis birdseed contaminant citizen convair citizen scrubby extensive frighten fateful judaica list southeastern soothe stormy suppose scrubby trundle trillion,,,
 qwen3.5-4b,word_sorting,word_sorting_0137,ape-word_sorting-run1-B,no answer extracted,stop,33.0,,affirmative airframe arcing ballroom bassoon benefit buggy coupon decide dodge hypothermia intrepid junior ladle nineveh prorogue schmitt shagging sparse ulcerate,False,affirmative airframe arcing ballroom bassoon buggy coupon decide dodge intrepid junior ladle nineveh prorogue schmitt shagging sparse ulcerate,,,
-gpt-oss-120b,word_sorting,word_sorting_0197,ape-word_sorting-A,wrong answer,stop,334.0,bate callous climb cortez dnieper dogging giantess garrison mast moran muddy prank reverie satisfy staunch,bate callous climb cortez dnieper dogging garrison giantess mast moran muddy prank reverie satisfy staunch,False,Answer: bate callous climb cortez dnieper dogging giantess garrison mast moran muddy prank reverie satisfy staunch,,,
+gpt-oss-120b,salient_translation_error_detection,salient_translation_error_detection_0082,ape-salient_translation_error_detection-run1-A,wrong answer,stop,54.0,D,(A),False,"The mistake changes the nationality from “Swiss” to “Canadian,” which is an incorrect substitution of a named entity.
+
+Answer: (D)",,,
 gpt-oss-20b,salient_translation_error_detection,salient_translation_error_detection_0090,ape-salient_translation_error_detection-run1-B,wrong answer,stop,126.0,D,(A),False,"The translation incorrectly changes the nationality from Austrian to Australian, which is a change of a named entity.
 
 Answer: (D)",,,
-deepseek-v4.1-flash,word_sorting,word_sorting_0105,ape-word_sorting-A,wrong answer,stop,438.0,baccarat blare bowman earl gloss granola hollandaise inauspicious mackenzie metaphoric pedro penis psyche quarantine roadster supranational,arenaceous baccarat blare bowman earl gloss granola hollandaise inauspicious mackenzie metaphoric pedro penis psyche quarantine roadster supranational,False,Answer: baccarat blare bowman earl gloss granola hollandaise inauspicious mackenzie metaphoric pedro penis psyche quarantine roadster supranational,,,
+deepseek-v4.1-flash,salient_translation_error_detection,salient_translation_error_detection_0243,ape-salient_translation_error_detection-run1-A,wrong answer,stop,416.0,E,(A),False,"The translation omits the clause “am Rosenmontag stattfindende” (“taking place on Rose Monday”), which is significant content from the source.
+
+Answer: (E)",,,
 qwen3.5-9b,word_sorting,word_sorting_0184,ape-word_sorting-run1-A,wrong answer,stop,38.0,appoint biharmonic baneberry dyne moustache pirate windowsill wiry,appoint baneberry biharmonic dyne moustache pirate windowsill wiry,False,"appoint biharmonic baneberry dyne moustache pirate windowsill wiry
 Answer: appoint biharmonic baneberry dyne moustache pirate windowsill wiry",,,
 qwen3.5-4b,salient_translation_error_detection,salient_translation_error_detection_0190,ape-salient_translation_error_detection-run1-B,wrong answer,stop,1168.0,A,(C),False,"un"" if that were an option. Since ""Noun"" isn't an option, and ""Modifiers"" covers attributes like gender, (A) is the strongest candidate.
@@ -138,12 +92,14 @@ Therefore, the error is changing the gender modifier of the noun ""person"".
 Answer: (A)
 
 Answer: (A)",,,
-gpt-oss-120b,word_sorting,word_sorting_0037,ape-word_sorting-A,wrong answer,stop,593.0,accomplice az circumcircle clatter crepe doff emission fairfax incantation labour lorry pleura prig ride tea upon viaduct wheelbase whim,accomplice az choral circumcircle clatter crepe doff emission fairfax incantation labour lorry pleura prig ride tea upon viaduct wheelbase whim,False,Answer: accomplice az circumcircle clatter crepe doff emission fairfax incantation labour lorry pleura prig ride tea upon viaduct wheelbase whim,,,
+gpt-oss-120b,word_sorting,word_sorting_0235,ape-word_sorting-A,wrong answer,stop,471.0,asset bona coastal cicero dusky exonerate gaussian handlebar inhabitation purport rastus responsible ruanda silver zig,asset bona cicero coastal dusky exonerate gaussian handlebar inhabitation portfolio purport rastus responsible ruanda silver zig,False,Answer: asset bona coastal cicero dusky exonerate gaussian handlebar inhabitation purport rastus responsible ruanda silver zig,,,
 gpt-oss-20b,word_sorting,word_sorting_0229,ape-word_sorting-run1-B,wrong answer,stop,1759.0,afternoon complementary dixie hesitate horsepower kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,afternoon complementary dixie hesitate horsepower immaculate kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,False,Answer: afternoon complementary dixie hesitate horsepower kind laughlin loire mechanism nimble sandia septuagenarian shuffleboard sierra toggle woebegone,,,
-deepseek-v4.1-flash,word_sorting,word_sorting_0099,ape-word_sorting-A,wrong answer,stop,121.0,miaow lise snipe,lise miaow snipe,False,Answer: miaow lise snipe,,,
-gpt-oss-120b,word_sorting,word_sorting_0047,ape-word_sorting-A,correct (control),stop,176.0,amperage crimea farther insolent ping protocol raillery stephen tech,amperage crimea farther insolent ping protocol raillery stephen tech,True,Answer: amperage crimea farther insolent ping protocol raillery stephen tech,,,
+deepseek-v4.1-flash,causal_judgement,causal_judgement_0014,ape-causal_judgement-run1-A,wrong answer,stop,1198.0,no,Yes,False,"No.
+
+Answer: No",,,
+gpt-oss-120b,word_sorting,word_sorting_0047,ape-word_sorting-A,correct (control),stop,131.0,amperage crimea farther insolent ping protocol raillery stephen tech,amperage crimea farther insolent ping protocol raillery stephen tech,True,Answer: amperage crimea farther insolent ping protocol raillery stephen tech,,,
 gpt-oss-20b,word_sorting,word_sorting_0107,ape-word_sorting-run1-B,correct (control),stop,1101.0,bivalve mainstream malformed mortify o'connell paunchy sleuth twelvefold umbilical vinegar,bivalve mainstream malformed mortify o'connell paunchy sleuth twelvefold umbilical vinegar,True,Answer: bivalve mainstream malformed mortify o'connell paunchy sleuth twelvefold umbilical vinegar,,,
-deepseek-v4.1-flash,word_sorting,word_sorting_0000,ape-word_sorting-A,correct (control),stop,86.0,syndrome therefrom,syndrome therefrom,True,Answer: syndrome therefrom,,,
+deepseek-v4.1-flash,word_sorting,word_sorting_0033,ape-word_sorting-run1-A,correct (control),stop,583.0,adonis birdseed citizen contaminant convair extensive fateful frighten judaica scrubby soothe southeastern stormy suppose trillion trundle,adonis birdseed citizen contaminant convair extensive fateful frighten judaica scrubby soothe southeastern stormy suppose trillion trundle,True,Answer: adonis birdseed citizen contaminant convair extensive fateful frighten judaica scrubby soothe southeastern stormy suppose trillion trundle,,,
 qwen3.5-9b,word_sorting,word_sorting_0119,ape-word_sorting-run1-B,correct (control),stop,308.0,allegoric collate euphony gloriana loge lollipop mast milord prolix rendezvous salle schnabel,allegoric collate euphony gloriana loge lollipop mast milord prolix rendezvous salle schnabel,True,"'g' comes before 'l', so loge comes first)
 6.  **m**: mast, milord (Compare ""ast"" vs ""il"": 'a' comes before 'i', so mast comes first)
 7.  **p**: prolix
