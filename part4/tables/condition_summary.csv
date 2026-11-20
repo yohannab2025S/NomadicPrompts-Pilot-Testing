@@ -1,0 +1,5 @@
+condition,mean_gain_over_start,ci_lo,ci_hi
+own_best,0.014467,-0.003096,0.03174
+random,-0.022774,-0.041288,-0.004736
+one_size,0.009456,-0.007249,0.0263
+borrowed (all 60 task x pair cells),0.007854,-0.007073,0.022766

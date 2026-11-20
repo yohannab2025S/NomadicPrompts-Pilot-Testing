@@ -1,0 +1,17 @@
+scope,comparison,measure,difference,ci_lo,ci_hi,excludes_zero
+word_sorting,same_provider minus cross_provider,headroom_capture,0.7718,-0.0365,4.0754,False
+word_sorting,same_provider minus cross_provider,retention,0.7718,-0.0365,4.0754,False
+word_sorting,large_to_small minus small_to_large,headroom_capture,0.0278,-3.6984,3.75,False
+word_sorting,large_to_small minus small_to_large,retention,-0.125,-7.2025,3.8687,False
+causal_judgement,same_provider minus cross_provider,headroom_capture,,-19.1,4.3381,False
+causal_judgement,same_provider minus cross_provider,retention,,-19.1,4.3381,False
+causal_judgement,large_to_small minus small_to_large,headroom_capture,,-4.5861,494360648751573.7,False
+causal_judgement,large_to_small minus small_to_large,retention,,-183767571001896.62,7.487,False
+salient_translation_error_detection,same_provider minus cross_provider,headroom_capture,0.1026,-2.9128,3.809,False
+salient_translation_error_detection,same_provider minus cross_provider,retention,0.1026,-2.9128,3.809,False
+salient_translation_error_detection,large_to_small minus small_to_large,headroom_capture,,-5.4216,3.3969,False
+salient_translation_error_detection,large_to_small minus small_to_large,retention,,-10.2421,4.1131,False
+ALL_TASKS,same_provider minus cross_provider,headroom_capture,0.2782,-2.2876,2.7352,False
+ALL_TASKS,same_provider minus cross_provider,retention,0.2782,-2.2876,2.7352,False
+ALL_TASKS,large_to_small minus small_to_large,headroom_capture,-0.0918,-9.2098,7.9269,False
+ALL_TASKS,large_to_small minus small_to_large,retention,0.9007,-10.9134,17.0602,False

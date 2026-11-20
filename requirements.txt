@@ -6,3 +6,8 @@ pandas
 scipy
 tiktoken
 google-genai
+matplotlib
+seaborn
+scikit-learn
+reportlab
+pillow

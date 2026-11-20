@@ -6,7 +6,8 @@ Run from the repository root:  python part4/rq_extra.py
     (larger->smaller: gpt-oss-120b->20b, qwen3.5-9b->4b; smaller->larger: the reverse)
   - Prompt-preference agreement: mean Spearman within vs across provider
 Paired bootstrap: 10,000 resamples of Part B items per task, one shared resample for all models
-and conditions, seed 42. Percentile intervals; resamples with a non-positive denominator are kept.
+and conditions, seed 42 (same seed and rule as analysis_part4.py). As in analysis_part4.py, a resample whose
+summed denominator is 0 or below gives no ratio and is left out of the percentile interval; the share kept is printed.
 """
 import csv
 from pathlib import Path
@@ -42,25 +43,26 @@ def pooled(pairs, kind):
         den = sum(gain(t, tg, tg, boot) if kind == "headroom" else gain(t, s, s, boot) for s, tg in pairs for t in TASKS)
         out.append((num, den))
     (n, d), (nb, db) = out
-    return n / d, nb / db
+    rb = np.where(db > 0, nb / np.where(db > 0, db, 1), np.nan)
+    return n / d, rb, float(np.mean(db > 0))
 
 
 def fmt(point, boot):
-    lo, hi = np.percentile(boot, [2.5, 97.5]); return f"{point:.2f} [{lo:.2f}, {hi:.2f}]"
+    lo, hi = np.nanpercentile(boot, [2.5, 97.5]); return f"{point:.2f} [{lo:.2f}, {hi:.2f}]"
 
 
 allp = [(s, t) for s in M for t in M if s != t]
-r, rb = pooled(allp, "headroom")
-print("RQ1 pooled headroom capture, all 20 pairs:", fmt(r, rb))
+r, rb, kept = pooled(allp, "headroom")
+print(f"RQ1 pooled headroom capture, all 20 pairs: {fmt(r, rb)} (denominator > 0 in {kept:.0%} of resamples)")
 nonpos = sum(1 for s, tg in allp if sum(gain(t, tg, s, False) for t in TASKS) <= 0)
 print(f"RQ1 pairs whose borrowed gain (sum over tasks) <= 0: {nonpos} of 20")
 
 ls = [("gpt-oss-120b", "gpt-oss-20b"), ("qwen3.5-9b", "qwen3.5-4b")]
 sl = [(b, a) for a, b in ls]
 for kind in ("headroom", "retention"):
-    a, ab = pooled(ls, kind); b, bb = pooled(sl, kind)
-    print(f"Size (within company) {kind}: larger->smaller {fmt(a, ab)}; smaller->larger {fmt(b, bb)}; "
-          f"difference {fmt(a - b, ab - bb)}")
+    a, ab, ka = pooled(ls, kind); b, bb, kb = pooled(sl, kind)
+    print(f"Size (within company) {kind}: larger->smaller {fmt(a, ab)} (kept {ka:.0%}); "
+          f"smaller->larger {fmt(b, bb)} (kept {kb:.0%}); difference {fmt(a - b, ab - bb)}")
 
 within, across = [], []
 for i, a in enumerate(M):

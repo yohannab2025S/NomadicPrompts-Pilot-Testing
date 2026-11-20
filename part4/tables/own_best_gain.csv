@@ -1,0 +1,16 @@
+task,model,own_best_gain,ci_lo,ci_hi,ci_excludes_zero
+word_sorting,gpt-oss-120b,0.04,-0.04,0.12,False
+word_sorting,gpt-oss-20b,0.0467,-0.0333,0.1267,False
+word_sorting,deepseek-v4.1-flash,-0.0067,-0.02,0.0,False
+word_sorting,qwen3.5-9b,0.0133,-0.06,0.0867,False
+word_sorting,qwen3.5-4b,0.0667,-0.02,0.16,False
+causal_judgement,gpt-oss-120b,-0.0115,-0.092,0.069,False
+causal_judgement,gpt-oss-20b,0.0115,-0.0575,0.0805,False
+causal_judgement,deepseek-v4.1-flash,-0.0115,-0.0805,0.0575,False
+causal_judgement,qwen3.5-9b,0.046,-0.046,0.1379,False
+causal_judgement,qwen3.5-4b,-0.0575,-0.1609,0.046,False
+salient_translation_error_detection,gpt-oss-120b,0.0,-0.0467,0.0467,False
+salient_translation_error_detection,gpt-oss-20b,-0.04,-0.1,0.0133,False
+salient_translation_error_detection,deepseek-v4.1-flash,0.02,-0.02,0.06,False
+salient_translation_error_detection,qwen3.5-9b,0.04,-0.0133,0.1,False
+salient_translation_error_detection,qwen3.5-4b,0.06,-0.0133,0.1333,False

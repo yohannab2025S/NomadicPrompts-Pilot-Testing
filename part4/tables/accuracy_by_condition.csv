@@ -1,0 +1,76 @@
+task,model,condition,accuracy,ci_lo,ci_hi,n_items,n_runs
+word_sorting,gpt-oss-120b,start,0.7,0.6267,0.7733,150,1
+word_sorting,gpt-oss-120b,own_best,0.74,0.6733,0.8067,150,1
+word_sorting,gpt-oss-120b,borrowed (mean of 4 other models' best prompts),0.71,0.6517,0.7683,150,1
+word_sorting,gpt-oss-120b,random,0.64,0.56,0.72,150,1
+word_sorting,gpt-oss-120b,one_size,0.6933,0.62,0.7667,150,1
+word_sorting,gpt-oss-20b,start,0.8133,0.7467,0.8733,150,1
+word_sorting,gpt-oss-20b,own_best,0.86,0.8,0.9133,150,1
+word_sorting,gpt-oss-20b,borrowed (mean of 4 other models' best prompts),0.81,0.7717,0.8467,150,1
+word_sorting,gpt-oss-20b,random,0.7533,0.6867,0.82,150,1
+word_sorting,gpt-oss-20b,one_size,0.8333,0.7733,0.8933,150,1
+word_sorting,deepseek-v4.1-flash,start,1.0,1.0,1.0,150,1
+word_sorting,deepseek-v4.1-flash,own_best,0.9933,0.98,1.0,150,1
+word_sorting,deepseek-v4.1-flash,borrowed (mean of 4 other models' best prompts),1.0,1.0,1.0,150,1
+word_sorting,deepseek-v4.1-flash,random,1.0,1.0,1.0,150,1
+word_sorting,deepseek-v4.1-flash,one_size,1.0,1.0,1.0,150,1
+word_sorting,qwen3.5-9b,start,0.82,0.76,0.88,150,1
+word_sorting,qwen3.5-9b,own_best,0.8333,0.7733,0.8868,150,1
+word_sorting,qwen3.5-9b,borrowed (mean of 4 other models' best prompts),0.815,0.775,0.855,150,1
+word_sorting,qwen3.5-9b,random,0.7733,0.7067,0.84,150,1
+word_sorting,qwen3.5-9b,one_size,0.8333,0.7733,0.8868,150,1
+word_sorting,qwen3.5-4b,start,0.5933,0.5133,0.6733,150,1
+word_sorting,qwen3.5-4b,own_best,0.66,0.58,0.7333,150,1
+word_sorting,qwen3.5-4b,borrowed (mean of 4 other models' best prompts),0.6283,0.5683,0.6883,150,1
+word_sorting,qwen3.5-4b,random,0.46,0.38,0.54,150,1
+word_sorting,qwen3.5-4b,one_size,0.6467,0.5667,0.72,150,1
+causal_judgement,gpt-oss-120b,start,0.6667,0.5632,0.7586,87,1
+causal_judgement,gpt-oss-120b,own_best,0.6552,0.5517,0.7586,87,1
+causal_judgement,gpt-oss-120b,borrowed (mean of 4 other models' best prompts),0.6753,0.5833,0.7615,87,1
+causal_judgement,gpt-oss-120b,random,0.6897,0.5862,0.7816,87,1
+causal_judgement,gpt-oss-120b,one_size,0.6552,0.5517,0.7471,87,1
+causal_judgement,gpt-oss-20b,start,0.6552,0.5517,0.7471,87,1
+causal_judgement,gpt-oss-20b,own_best,0.6667,0.5632,0.7586,87,1
+causal_judgement,gpt-oss-20b,borrowed (mean of 4 other models' best prompts),0.6408,0.5489,0.727,87,1
+causal_judgement,gpt-oss-20b,random,0.5977,0.4943,0.7011,87,1
+causal_judgement,gpt-oss-20b,one_size,0.6552,0.5517,0.7471,87,1
+causal_judgement,deepseek-v4.1-flash,start,0.7011,0.5977,0.7931,87,1
+causal_judgement,deepseek-v4.1-flash,own_best,0.6897,0.5862,0.7816,87,1
+causal_judgement,deepseek-v4.1-flash,borrowed (mean of 4 other models' best prompts),0.704,0.6149,0.7902,87,1
+causal_judgement,deepseek-v4.1-flash,random,0.6667,0.5632,0.7701,87,1
+causal_judgement,deepseek-v4.1-flash,one_size,0.7126,0.6207,0.8046,87,1
+causal_judgement,qwen3.5-9b,start,0.5747,0.4713,0.6782,87,1
+causal_judgement,qwen3.5-9b,own_best,0.6207,0.5172,0.7241,87,1
+causal_judgement,qwen3.5-9b,borrowed (mean of 4 other models' best prompts),0.6264,0.546,0.704,87,1
+causal_judgement,qwen3.5-9b,random,0.5747,0.4713,0.6782,87,1
+causal_judgement,qwen3.5-9b,one_size,0.6207,0.5172,0.7241,87,1
+causal_judgement,qwen3.5-4b,start,0.6092,0.5057,0.7126,87,1
+causal_judgement,qwen3.5-4b,own_best,0.5517,0.4483,0.6552,87,1
+causal_judgement,qwen3.5-4b,borrowed (mean of 4 other models' best prompts),0.5948,0.5172,0.6724,87,1
+causal_judgement,qwen3.5-4b,random,0.5632,0.4598,0.6667,87,1
+causal_judgement,qwen3.5-4b,one_size,0.5517,0.4483,0.6552,87,1
+salient_translation_error_detection,gpt-oss-120b,start,0.6733,0.5933,0.7467,150,1
+salient_translation_error_detection,gpt-oss-120b,own_best,0.6733,0.5933,0.7467,150,1
+salient_translation_error_detection,gpt-oss-120b,borrowed (mean of 4 other models' best prompts),0.6833,0.6133,0.75,150,1
+salient_translation_error_detection,gpt-oss-120b,random,0.6533,0.5733,0.7333,150,1
+salient_translation_error_detection,gpt-oss-120b,one_size,0.68,0.6,0.7533,150,1
+salient_translation_error_detection,gpt-oss-20b,start,0.7267,0.6533,0.8,150,1
+salient_translation_error_detection,gpt-oss-20b,own_best,0.6867,0.6133,0.76,150,1
+salient_translation_error_detection,gpt-oss-20b,borrowed (mean of 4 other models' best prompts),0.7067,0.64,0.77,150,1
+salient_translation_error_detection,gpt-oss-20b,random,0.7267,0.6533,0.8,150,1
+salient_translation_error_detection,gpt-oss-20b,one_size,0.6867,0.6133,0.76,150,1
+salient_translation_error_detection,deepseek-v4.1-flash,start,0.7667,0.7,0.8333,150,1
+salient_translation_error_detection,deepseek-v4.1-flash,own_best,0.7867,0.72,0.8533,150,1
+salient_translation_error_detection,deepseek-v4.1-flash,borrowed (mean of 4 other models' best prompts),0.78,0.7167,0.8417,150,1
+salient_translation_error_detection,deepseek-v4.1-flash,random,0.78,0.7133,0.8467,150,1
+salient_translation_error_detection,deepseek-v4.1-flash,one_size,0.78,0.7133,0.8467,150,1
+salient_translation_error_detection,qwen3.5-9b,start,0.66,0.5867,0.7333,150,1
+salient_translation_error_detection,qwen3.5-9b,own_best,0.7,0.6267,0.7733,150,1
+salient_translation_error_detection,qwen3.5-9b,borrowed (mean of 4 other models' best prompts),0.7,0.6333,0.765,150,1
+salient_translation_error_detection,qwen3.5-9b,random,0.7067,0.6333,0.78,150,1
+salient_translation_error_detection,qwen3.5-9b,one_size,0.6933,0.62,0.7667,150,1
+salient_translation_error_detection,qwen3.5-4b,start,0.6467,0.5667,0.7267,150,1
+salient_translation_error_detection,qwen3.5-4b,own_best,0.7067,0.6333,0.78,150,1
+salient_translation_error_detection,qwen3.5-4b,borrowed (mean of 4 other models' best prompts),0.65,0.585,0.7133,150,1
+salient_translation_error_detection,qwen3.5-4b,random,0.68,0.6065,0.7533,150,1
+salient_translation_error_detection,qwen3.5-4b,one_size,0.7067,0.6333,0.78,150,1
