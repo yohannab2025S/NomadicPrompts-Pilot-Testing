@@ -11,7 +11,7 @@ os.makedirs("logs_export/merged", exist_ok=True); os.makedirs("part4/tables", ex
 
 rows = []
 for f in sorted(glob.glob("logs_export/*/calls.jsonl.gz")):
-    owner = f.split("/")[1]
+    owner = os.path.basename(os.path.dirname(f))
     for line in gzip.open(f, "rt", encoding="utf-8"):
         try: d = json.loads(line)
         except Exception: continue
